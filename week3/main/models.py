@@ -16,7 +16,7 @@ class Profile(models.Model):
     user = models.OneToOneField(MainUser, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500)
     address = models.CharField(max_length=300)
-    avatar = models.FileField()
+    avatar = models.FileField(null=True, blank=True)
 
     def __str__(self):
         return self.user.username
@@ -26,6 +26,9 @@ class Project(models.Model):
     name = models.CharField(max_length=300)
     descr = models.CharField(max_length=1000)
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='created_projects')
+
+    def __str__(self):
+        return self.name
 
 
 class Block(models.Model):
@@ -44,10 +47,16 @@ class Block(models.Model):
     block_type = models.IntegerField(choices=BLOCK_TYPE_CHOICES)
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='blocks')
 
+    def __str__(self):
+        return self.name
+
 
 class ProjectMember(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='project_members')
     user = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='involved_projects')
+
+    def __str__(self):
+        return self.user.username
 
 
 class Task(models.Model):
@@ -58,11 +67,17 @@ class Task(models.Model):
     block = models.ForeignKey(Block, on_delete=models.CASCADE, related_name='blocks')
     order = models.IntegerField()
 
+    def __str__(self):
+        return f'Task "{self.name}"'
+
 
 class TaskDocument(models.Model):
     document = models.FileField()
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='task_documents')
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='documents')
+
+    def __str__(self):
+        return f'{self.task}(document)'
 
 
 class TaskComment(models.Model):
@@ -70,3 +85,6 @@ class TaskComment(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='task_comments')
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='comments')
+
+    def __str__(self):
+        return f'{self.body}({self.creator})'
