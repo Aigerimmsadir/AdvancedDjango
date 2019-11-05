@@ -31,10 +31,9 @@ class UserCreate(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
-            user = serializer.save()
-            # profile=Profile(user=user, bio)
-            if user:
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['POST'])
@@ -42,9 +41,10 @@ def logout(request):
     request.auth.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
 
+
 @api_view(['GET'])
 def current(request):
     permission_classes = (IsAuthenticated,)
-    user=request.user
+    user = request.user
     print(user)
     return Response(status=status.HTTP_204_NO_CONTENT)

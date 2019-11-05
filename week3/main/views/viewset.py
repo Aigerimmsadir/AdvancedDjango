@@ -2,55 +2,65 @@ from rest_framework import viewsets
 from rest_framework import mixins
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
-
+from rest_framework.permissions import *
+import logging
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 
 from main.models import *
 from main.serializers import *
 
-
-class ProjectListViewSet(mixins.RetrieveModelMixin,
-                         mixins.ListModelMixin,
-                         viewsets.GenericViewSet):
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializer
+logger = logging.getLogger(__name__)
 
 
-class ProjectDetailViewSet(mixins.RetrieveModelMixin,
-                           mixins.UpdateModelMixin,
-                           mixins.DestroyModelMixin,
-                           viewsets.GenericViewSet):
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializer
+class ProjectMemberViewSet(viewsets.ModelViewSet):
+    queryset = ProjectMember.objects.all()
+    serializer_class = ProjectMemberSerializer
+    permission_classes = (IsAuthenticated,)
 
 
-class ProjectViewSet(mixins.ListModelMixin,
-                     viewsets.GenericViewSet):
+class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     permission_classes = (IsAuthenticated,)
 
-    def perform_create(self, serializer):
-        return serializer.save(creator=self.request.user)
-
     @action(methods=['GET'], detail=False)
-    def my(self, request):
-        projects = Project.objects.filter(creator=self.request.user)
-        serializer = self.get_serializer(projects, many=True)
+    def myprojects(self, request):
+        projects = Project.for_user(request.user)
+        serializer = ProjectSerializer(projects, many=True)
         return Response(serializer.data)
 
+
+class TaskViewSet(viewsets.ModelViewSet):
+    queryset = Task.objects.all()
+        # serializer_class = TaskSerializer
+    permission_classes = (IsAuthenticated,)
+
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return TaskFullSerializer
+        return TaskShortSerializer
+
     @action(methods=['GET'], detail=True)
-    def tasks(self, request, pk):
-        # project = get_object_or_404(Project, id=pk)
+    def blocktasks(self, request, pk):
+        block = Block.objects.get(id=pk)
+        serializer = TaskSerializer(block.tasks, many=True)
+        return Response(serializer.data)
 
-        # try:
-        #     project = Project.objects.get(id=pk)
-        # except Project.DoesNotExist:
-        #     raise Http404
+    def perform_create(self, serializer):
+        serializer.save()
+        logger.info(f"{self.request.user} created task: {serializer.data.get('name')}")
 
-        instance = self.get_object()
-        res = f'{instance.name}: tasks'
+class TaskCommentViewSet(viewsets.ModelViewSet):
+    queryset = TaskComment.objects.all()
+    serializer_class = TaskCommentSerializer
+    permission_classes = (IsAuthenticatedOrReadOnly,)
 
-        return Response(res)
+    def perform_create(self, serializer):
+        serializer.save(creator=self.request.user)
+
+    @action(methods=['GET'], detail=True)
+    def comments(self, request, pk):
+        task = Task.objects.get(id=pk)
+        serializer = TaskCommentSerializer(task.comments, many=True)
+        return Response(serializer.data)
