@@ -12,33 +12,40 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
-    profile = ProfileSerializer()
+
+    # profile = ProfileSerializer()
 
     class Meta:
         model = MainUser
-        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'password', 'profile')
-
-    def create(self, validated_data):
-        with transaction.atomic():
-            profile_data = validated_data.pop('profile')
-            user = MainUser.objects.create_user(**validated_data)
-            Profile.objects.create(user=user, **profile_data)
-            return user
+        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'password',)
+    #
+    # def create(self, validated_data):
+    #     with transaction.atomic():
+    #         profile_data = validated_data.pop('profile')
+    #         user = MainUser.objects.create_user(**validated_data)
+    #         Profile.objects.create(user=user, **profile_data)
+    #         return user
 
 
 class ProjectSerializer(serializers.ModelSerializer):
     creator_name = serializers.SerializerMethodField()
-    creator_id = serializers.IntegerField(write_only=True)
-    tasks_count = serializers.IntegerField(default=0)
+    creator = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    blocks_count = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = Project
-        fields = ('id', 'name', 'descr', 'creator_name', 'creator_id', 'tasks_count')
+        fields = ('id', 'name', 'descr', 'creator_name', 'creator', 'blocks_count')
 
     def get_creator_name(self, obj):
         if obj.creator is not None:
             return obj.creator.username
         return ''
+
+class ProjectFullSerializer(ProjectSerializer):
+    creator = UserSerializer()
+
+    class Meta(ProjectSerializer.Meta):
+        fields = ProjectSerializer.Meta.fields + ('descr',)
 
 
 class BlockSerializer(serializers.ModelSerializer):
@@ -104,10 +111,16 @@ class TaskFullSerializer(TaskShortSerializer):
 
 class TaskCommentSerializer(serializers.ModelSerializer):
     creator = UserSerializer(read_only=True)
+    stars = serializers.IntegerField(read_only=True)
 
     class Meta:
         model = TaskComment
         fields = '__all__'
+
+    def validate_stars(self, value):
+        if value > 10 or value < 0:
+            raise serializers.ValidationError('name length less than 3')
+        return value
 
 
 class TaskDocumentSerializer(serializers.ModelSerializer):

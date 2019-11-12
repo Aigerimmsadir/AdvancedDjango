@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from rest_framework.authtoken.models import Token
+from utils.upload import *
+from utils.validators import task_document_size, task_document_extension
 
 
 class MainUser(AbstractUser):
@@ -60,10 +62,10 @@ class Block(models.Model):
 
     @property
     def tasks_count(self):
-        return self.tasks.count()
+        return self.blocks.count()
 
     def __str__(self):
-        return self.name
+        return f'{self.name}({self.project})'
 
 
 class ProjectMember(models.Model):
@@ -87,12 +89,13 @@ class Task(models.Model):
 
 
 class TaskDocument(models.Model):
-    document = models.FileField()
+    document = models.FileField(upload_to=task_document_path, validators=[task_document_size, task_document_extension],
+                                null=True)
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='task_documents')
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='documents')
 
     def __str__(self):
-        return f'{self.task}(document)'
+        return f'{self.task}(document #){self.id}'
 
 
 class TaskComment(models.Model):
@@ -100,6 +103,14 @@ class TaskComment(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='task_comments')
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='comments')
+    stars = models.PositiveSmallIntegerField(default=0)
 
     def __str__(self):
         return f'{self.body}({self.creator})'
+
+    def save(self, *args, **kwargs):
+        created = self.pk is None
+        if created:
+            if self.creator.is_superuser:
+                self.stars = 10
+        super().save(*args, **kwargs)

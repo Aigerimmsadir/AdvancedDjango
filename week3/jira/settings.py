@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 import datetime
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -26,7 +26,6 @@ SECRET_KEY = '(0@sx9csx9n$n$o6cb#t^8_vn5h=7-((m+hm8_+*n)q==pd*l8'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -72,7 +71,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'jira.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -124,26 +122,26 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'static/'
 JWT_AUTH = {
     'JWT_ENCODE_HANDLER':
-    'rest_framework_jwt.utils.jwt_encode_handler',
+        'rest_framework_jwt.utils.jwt_encode_handler',
 
     'JWT_DECODE_HANDLER':
-    'rest_framework_jwt.utils.jwt_decode_handler',
+        'rest_framework_jwt.utils.jwt_decode_handler',
 
     'JWT_PAYLOAD_HANDLER':
-    'rest_framework_jwt.utils.jwt_payload_handler',
+        'rest_framework_jwt.utils.jwt_payload_handler',
 
     'JWT_PAYLOAD_GET_USER_ID_HANDLER':
-    'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
+        'rest_framework_jwt.utils.jwt_get_user_id_from_payload_handler',
 
     'JWT_RESPONSE_PAYLOAD_HANDLER':
-    'rest_framework_jwt.utils.jwt_response_payload_handler',
+        'rest_framework_jwt.utils.jwt_response_payload_handler',
 
     'JWT_SECRET_KEY': SECRET_KEY,
     'JWT_GET_USER_SECRET_KEY': None,
@@ -164,37 +162,34 @@ JWT_AUTH = {
     'JWT_AUTH_COOKIE': None,
 
 }
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '%(levelname)s -- %(asctime)s -- %(message)s',
-        },
-        'simple': {
-            'format': '%(levelname)s -- %(message)s',
-        }
-    },
-    'handlers': {
-        'core_file': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
-            'filename': 'core.log',
-            'formatter': 'verbose'
-        },
-        'console_handler': {
-            'level': 'INFO',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple'
-        }
-    },
-    'loggers': {
-        'core': {
-            'handlers': ['core_file', 'console_handler'],
-            # 'level': 'INFO',
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'verbose': {
+#             'format': '%(levelname)s --- %(asctime)s -- %(message)s',
+#         },
+#         'simple': {
+#             'format': '%(levelname)s -- %(message)s',
+#         }
+#     },
+#     'handlers': {
+#         'main_file': {
+#             'level': 'INFO',
+#             'class': 'logging.RotatingFileHandler',
+#             'filename': 'main.log',
+#             'maxBytes': 1024*1024*5, # 5 MB
+#             'backupCount': 3,
+#             'formatter': 'verbose'
+#         },
+#     },
+#     'loggers': {
+#         'main': {
+#             'handlers': ['main_file',],
+#             'propagate': False
+#         },
+#     },
+# }
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

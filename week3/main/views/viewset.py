@@ -6,7 +6,7 @@ from rest_framework.permissions import *
 import logging
 from django.http import Http404
 from django.shortcuts import get_object_or_404
-
+from rest_framework.parsers import JSONParser, FormParser, MultiPartParser
 from main.models import *
 from main.serializers import *
 
@@ -24,6 +24,11 @@ class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
     permission_classes = (IsAuthenticated,)
 
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return ProjectFullSerializer
+        return ProjectSerializer
+
     @action(methods=['GET'], detail=False)
     def myprojects(self, request):
         projects = Project.for_user(request.user)
@@ -33,7 +38,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
 
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
-        # serializer_class = TaskSerializer
+    # serializer_class = TaskSerializer
     permission_classes = (IsAuthenticated,)
 
     def get_serializer_class(self):
@@ -48,8 +53,8 @@ class TaskViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
 
     def perform_create(self, serializer):
-        serializer.save()
-        logger.info(f"{self.request.user} created task: {serializer.data.get('name')}")
+        logger.error(f"{self.request.user} created task: {serializer.data.get('name')}")
+
 
 class TaskCommentViewSet(viewsets.ModelViewSet):
     queryset = TaskComment.objects.all()

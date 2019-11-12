@@ -6,6 +6,7 @@ from main.models import *
 from main.serializers import *
 from rest_framework import generics
 from rest_framework import mixins
+from rest_framework.parsers import JSONParser, FormParser, MultiPartParser
 
 
 class ProjectList(mixins.ListModelMixin,
@@ -83,6 +84,7 @@ class TaskDocumentList(mixins.ListModelMixin,
     queryset = TaskDocument.objects.all()
     serializer_class = TaskDocumentSerializer
     permission_classes = (IsAuthenticated,)
+    parser_classes = (FormParser, MultiPartParser, JSONParser)
 
     def perform_create(self, serializer):
         serializer.save(creator=self.request.user)
