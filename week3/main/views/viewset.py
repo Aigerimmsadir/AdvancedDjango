@@ -46,14 +46,9 @@ class TaskViewSet(viewsets.ModelViewSet):
             return TaskFullSerializer
         return TaskShortSerializer
 
-    @action(methods=['GET'], detail=True)
-    def blocktasks(self, request, pk):
-        block = Block.objects.get(id=pk)
-        serializer = TaskSerializer(block.tasks, many=True)
-        return Response(serializer.data)
-
     def perform_create(self, serializer):
-        logger.error(f"{self.request.user} created task: {serializer.data.get('name')}")
+        serializer.save()
+        logger.info(f"{self.request.user} created task: {serializer.data.get('name')}")
 
 
 class TaskCommentViewSet(viewsets.ModelViewSet):

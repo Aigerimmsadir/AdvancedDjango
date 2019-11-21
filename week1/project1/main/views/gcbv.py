@@ -10,10 +10,12 @@ from main.models import *
 from main.serializers import *
 from rest_framework import filters
 
+
 class AdvertisementList(generics.ListCreateAPIView):
     serializer_class = AdvertisementSerializer
     filter_backends = (DjangoFilterBackend,)
-    filter_class= AdvertisementFilter
+    filter_class = AdvertisementFilter
+
     def get_queryset(self):
         try:
             category = Category.objects.get(id=self.kwargs.get('pk'))
@@ -30,4 +32,4 @@ class AdvertisementList(generics.ListCreateAPIView):
             print(category)
         except Category.DoesNotExist:
             raise Http404
-        serializer.save(owner=self.request.user,category=category) 
+        serializer.save(owner=self.request.user, category=category)

@@ -85,7 +85,7 @@ class Task(models.Model):
     order = models.IntegerField()
 
     def __str__(self):
-        return f'Task "{self.name}"'
+        return f'Task "{self.name}"({self.creator})'
 
 
 class TaskDocument(models.Model):

@@ -11,5 +11,5 @@ urlpatterns = [
     path('categories/<int:pk>/advertisements/', views.AdvertisementList.as_view()),
     path('advertisements/<int:pk>/', views.AdvertisementDetail.as_view()),
     path('advertisements/<int:pk>/comments/', views.Comments.as_view()),
-
+    path('advertisements/<int:pk>/my_comments/', views.UserComments.as_view()),
 ]

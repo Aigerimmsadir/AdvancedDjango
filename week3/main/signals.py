@@ -1,7 +1,18 @@
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save,pre_delete
 from django.dispatch import receiver
 
 from main.models import *
+
+from utils.upload import task_delete_path
+
+
+@receiver(pre_delete, sender=Task)
+def task_deleted(sender, instance, **kwargs):
+    print(TaskDocument.objects.filter(task=instance.id))
+    print(instance.documents.all())
+    for taskdocument in instance.documents.all():
+        print(taskdocument)
+        task_delete_path(document=taskdocument.document)
 
 
 @receiver(post_save, sender=MainUser)

@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from main.models import *
 from django.db import transaction
+import logging
+logger = logging.getLogger(__name__)
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -42,7 +44,7 @@ class ProjectSerializer(serializers.ModelSerializer):
         return ''
 
 class ProjectFullSerializer(ProjectSerializer):
-    creator = UserSerializer()
+    creator = UserSerializer(read_only=True)
 
     class Meta(ProjectSerializer.Meta):
         fields = ProjectSerializer.Meta.fields + ('descr',)
@@ -97,6 +99,7 @@ class TaskShortSerializer(serializers.ModelSerializer):
 
     def validate_name(self, value):
         if len(value) < 3:
+            logger.error('value of name must have at least 3 characters')
             raise serializers.ValidationError('name length less than 3')
         return value
 

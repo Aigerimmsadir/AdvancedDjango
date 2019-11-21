@@ -47,3 +47,7 @@ class BlockDetailAPIView(APIView):
         project = Block.objects.get(id=pk)
         project.delete()
         return Response(status=status.HTTP_200_OK)
+
+
+
+#urgent tasks
