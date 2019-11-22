@@ -15,8 +15,12 @@ logger = logging.getLogger(__name__)
 
 class ProjectMemberViewSet(viewsets.ModelViewSet):
     queryset = ProjectMember.objects.all()
-    serializer_class = ProjectMemberSerializer
     permission_classes = (IsAuthenticated,)
+
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return ProjectMemberFullSerializer
+        return ProjectMemberSerializer
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
@@ -53,14 +57,28 @@ class TaskViewSet(viewsets.ModelViewSet):
 
 class TaskCommentViewSet(viewsets.ModelViewSet):
     queryset = TaskComment.objects.all()
-    serializer_class = TaskCommentSerializer
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def perform_create(self, serializer):
         serializer.save(creator=self.request.user)
+
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return TaskCommentFullSerializer
+        return TaskCommentSerializer
 
     @action(methods=['GET'], detail=True)
     def comments(self, request, pk):
         task = Task.objects.get(id=pk)
         serializer = TaskCommentSerializer(task.comments, many=True)
         return Response(serializer.data)
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = MainUser.objects.all()
+    permission_classes = (IsAuthenticated,)
+
+    def get_serializer_class(self):
+        if self.action == 'retrieve':
+            return UserSerializerFull
+        return UserSerializer

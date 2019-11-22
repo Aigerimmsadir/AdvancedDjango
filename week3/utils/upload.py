@@ -7,8 +7,12 @@ def task_document_path(instance, filename):
     return f'projects/{project_id}/{task_id}/{filename}'
 
 
+def avatar_document_path(instance, filename):
+    profile_id = instance.id
+    return f'profile_avatars/{profile_id}/{filename}'
 
-def task_delete_path(document):
+
+def file_delete_path(document):
     print(document)
     task_path = os.path.abspath(os.path.join(document.path, '..'))
     shutil.rmtree(task_path)

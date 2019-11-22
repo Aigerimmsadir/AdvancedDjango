@@ -23,6 +23,7 @@ urlpatterns = [
 router = routers.DefaultRouter()
 router.register('project_list/members', ProjectMemberViewSet, base_name='main')
 router.register('tasks', TaskViewSet, base_name='main')
+router.register('users', UserViewSet, base_name='main')
 router.register('projects', ProjectViewSet, base_name='main')
 router.register('task_comments_viewset', TaskCommentViewSet, base_name='main')
 urlpatterns += router.urls

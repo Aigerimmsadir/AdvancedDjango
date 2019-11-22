@@ -12,18 +12,6 @@ from main.serializers import *
 from rest_framework.permissions import IsAuthenticated
 
 
-@api_view(['POST'])
-@csrf_exempt
-def login(request):
-    username = request.data.get('username')
-    password = request.data.get('password')
-    user = authenticate(username=username, password=password)
-    if user is None:
-        return Response({'error': 'Invalid data'})
-
-    token, created = Token.objects.get_or_create(user=user)
-    return Response({'token': token.key})
-
 
 class UserCreate(APIView):
     http_method_names = ['post']
@@ -34,7 +22,6 @@ class UserCreate(APIView):
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 @api_view(['POST'])
 def logout(request):

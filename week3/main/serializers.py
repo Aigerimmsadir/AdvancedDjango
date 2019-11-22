@@ -2,6 +2,7 @@ from rest_framework import serializers
 from main.models import *
 from django.db import transaction
 import logging
+
 logger = logging.getLogger(__name__)
 
 
@@ -15,18 +16,16 @@ class ProfileSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
 
-    # profile = ProfileSerializer()
-
     class Meta:
         model = MainUser
         fields = ('id', 'username', 'email', 'first_name', 'last_name', 'password',)
-    #
-    # def create(self, validated_data):
-    #     with transaction.atomic():
-    #         profile_data = validated_data.pop('profile')
-    #         user = MainUser.objects.create_user(**validated_data)
-    #         Profile.objects.create(user=user, **profile_data)
-    #         return user
+
+
+class UserSerializerFull(UserSerializer):
+    profile = ProfileSerializer()
+
+    class Meta(UserSerializer.Meta):
+        fields = UserSerializer.Meta.fields + ('profile',)
 
 
 class ProjectSerializer(serializers.ModelSerializer):
@@ -42,6 +41,7 @@ class ProjectSerializer(serializers.ModelSerializer):
         if obj.creator is not None:
             return obj.creator.username
         return ''
+
 
 class ProjectFullSerializer(ProjectSerializer):
     creator = UserSerializer(read_only=True)
@@ -68,16 +68,25 @@ class BlockSerializer(serializers.ModelSerializer):
 
 class ProjectMemberSerializer(serializers.ModelSerializer):
     project_name = serializers.SerializerMethodField()
-    creator_id = serializers.IntegerField(write_only=True)
+    user_id = serializers.IntegerField(write_only=True)
 
     class Meta:
-        model = Project
-        fields = ('id', 'project_name', 'creator_id')
+        model = ProjectMember
+        fields = ('id', 'project_name', 'user_id')
 
     def get_project_name(self, obj):
         if obj.project is not None:
             return obj.project.name
         return ''
+
+
+class ProjectMemberFullSerializer(ProjectMemberSerializer):
+    user = UserSerializer()
+    project = ProjectSerializer()
+
+    class Meta(ProjectMemberSerializer.Meta):
+        model = ProjectMember
+        fields = ProjectMemberSerializer.Meta.fields + ('project', 'user')
 
 
 class TaskSerializer(serializers.ModelSerializer):
@@ -113,17 +122,22 @@ class TaskFullSerializer(TaskShortSerializer):
 
 
 class TaskCommentSerializer(serializers.ModelSerializer):
-    creator = UserSerializer(read_only=True)
-    stars = serializers.IntegerField(read_only=True)
-
     class Meta:
         model = TaskComment
         fields = '__all__'
+        read_only_fields = ('creator', 'stars')
 
     def validate_stars(self, value):
         if value > 10 or value < 0:
             raise serializers.ValidationError('name length less than 3')
         return value
+
+
+class TaskCommentFullSerializer(TaskCommentSerializer):
+    creator = UserSerializer(read_only=True)
+
+    class Meta(TaskCommentSerializer.Meta):
+        fields = TaskCommentSerializer.Meta.fields
 
 
 class TaskDocumentSerializer(serializers.ModelSerializer):

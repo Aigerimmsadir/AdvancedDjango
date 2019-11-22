@@ -2,7 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from rest_framework.authtoken.models import Token
 from utils.upload import *
-from utils.validators import task_document_size, task_document_extension
+from utils.validators import *
+from django.db.models import Max, Min, Count
+from django.db.models import Q
 
 
 class MainUser(AbstractUser):
@@ -18,7 +20,8 @@ class Profile(models.Model):
     user = models.OneToOneField(MainUser, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, null=True)
     address = models.CharField(max_length=300, null=True)
-    avatar = models.FileField(null=True, blank=True)
+    avatar = models.FileField(upload_to=avatar_document_path, validators=[task_document_size, avatar_document_extension],
+                              null=True)
 
     def __str__(self):
         return self.user.username
@@ -76,6 +79,16 @@ class ProjectMember(models.Model):
         return self.user.username
 
 
+class TasksWithMediaManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().annotate(Count('documents')).filter(documents__count__gt=0)
+
+
+class TasksForUser(models.Manager):
+    def get_queryset(self, user):
+        return super().get_queryset().filter(Q(creator=user) | Q(executor=user))
+
+
 class Task(models.Model):
     name = models.CharField(max_length=300)
     descr = models.CharField(max_length=1000)
@@ -83,9 +96,12 @@ class Task(models.Model):
     executor = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='executed_tasks')
     block = models.ForeignKey(Block, on_delete=models.CASCADE, related_name='tasks')
     order = models.IntegerField()
+    objects = models.Manager()
+    with_media = TasksWithMediaManager()
+    for_user = TasksForUser()
 
     def __str__(self):
-        return f'Task "{self.name}"({self.creator})'
+        return f'Task {self.id} "{self.name}"({self.creator})'
 
 
 class TaskDocument(models.Model):
@@ -98,12 +114,25 @@ class TaskDocument(models.Model):
         return f'{self.task}(document #){self.id}'
 
 
+class TaskCommentForUserManager(models.Manager):
+    def get_queryset(self, user):
+        return super().get_queryset().filter(creator=user)
+
+
+class PopularTaskComments(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().order_by('-stars')
+
+
 class TaskComment(models.Model):
     body = models.CharField(max_length=1000)
     created_at = models.DateTimeField(auto_now=True)
     creator = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='task_comments')
     task = models.ForeignKey(Task, on_delete=models.CASCADE, related_name='comments')
     stars = models.PositiveSmallIntegerField(default=0)
+    objects = models.Manager()
+    for_user = TaskCommentForUserManager()
+    popular_comments = PopularTaskComments()
 
     def __str__(self):
         return f'{self.body}({self.creator})'

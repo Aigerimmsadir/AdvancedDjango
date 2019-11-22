@@ -379,3 +379,296 @@ ERROR:main.serializers: value of name must have at least 3 characters (2019-11-1
 INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-20 00:49:09; autoreload.py:597)
 INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\week3\main\views\apiviews.py changed, reloading. (2019-11-20 01:25:55; autoreload.py:217)
 INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-20 01:26:01; autoreload.py:597)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 13:54:00; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 13:56:40; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 13:56:40; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 13:57:27; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 13:57:28; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:07:02; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:07:03; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:10:37; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:10:38; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:15:23; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:15:24; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:17:23; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:17:24; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:18:12; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:18:12; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:30:05; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:30:05; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:33:21; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:33:22; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:44:38; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:44:38; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:44:55; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:44:56; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:45:03; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:45:03; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 14:46:04; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:46:05; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 14:51:20; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:51:21; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 14:59:44; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 14:59:45; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:03:19; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:03:20; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:03:30; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:03:31; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:03:34; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:03:34; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\viewset.py changed, reloading. (2019-11-22 15:05:02; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:05:03; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:06:57; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:06:58; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:08:44; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:08:45; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:09:14; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:09:15; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\viewset.py changed, reloading. (2019-11-22 15:10:12; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:10:12; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:14:51; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:14:52; autoreload.py:597)
+ERROR:django.request: Internal Server Error: /main/project_list/members/1/ (2019-11-22 15:15:04; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 511, in to_representation
+    for field in fields:
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\utils\functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 1022, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 1090, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: Cannot set both 'fields' and 'exclude' options on serializer ProjectMemberFullSerializer.
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:15:13; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:15:14; autoreload.py:597)
+ERROR:django.request: Internal Server Error: /main/project_list/members/1/ (2019-11-22 15:15:17; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\fields.py", line 443, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\fields.py", line 93, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'ProjectMember' object has no attribute 'creator'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 513, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\fields.py", line 476, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `creator` on serializer `ProjectMemberFullSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `ProjectMember` instance.
+Original exception text was: 'ProjectMember' object has no attribute 'creator'.
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:16:20; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:16:21; autoreload.py:597)
+ERROR:django.request: Internal Server Error: /main/project_list/members/1/ (2019-11-22 15:16:23; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 511, in to_representation
+    for field in fields:
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\utils\functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 1022, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 1123, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'project' was declared on serializer ProjectMemberFullSerializer, but has not been included in the 'fields' option.
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:16:43; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:16:44; autoreload.py:597)
+ERROR:django.request: Internal Server Error: /main/project_list/members/1/ (2019-11-22 15:16:46; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 559, in data
+    ret = super().data
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 511, in to_representation
+    for field in fields:
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 372, in _readable_fields
+    for field in self.fields.values():
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\utils\functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 360, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\serializers.py", line 1309, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `creator` is not valid for model `ProjectMember`.
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:16:54; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:16:55; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 15:22:21; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 15:22:21; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 16:03:52; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:03:52; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 16:04:04; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:04:05; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\signals.py changed, reloading. (2019-11-22 16:08:45; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:08:46; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 16:14:24; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:14:25; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 16:14:37; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:14:37; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\signals.py changed, reloading. (2019-11-22 16:15:22; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:15:22; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\signals.py changed, reloading. (2019-11-22 16:17:48; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:17:49; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 16:21:21; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:21:22; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-11-22 16:21:34; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:21:34; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\utils\upload.py changed, reloading. (2019-11-22 16:23:09; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:23:09; autoreload.py:597)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:24:22; autoreload.py:597)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:28:02; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\serializers.py changed, reloading. (2019-11-22 16:31:25; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:31:26; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\auth.py changed, reloading. (2019-11-22 16:36:25; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:36:25; autoreload.py:597)
+ERROR:django.request: Internal Server Error: /main/users/ (2019-11-22 16:36:53; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\django\views\generic\base.py", line 71, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 505, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 465, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 476, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\views.py", line 502, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\generic.py", line 129, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\mixins.py", line 45, in list
+    serializer = self.get_serializer(queryset, many=True)
+  File "C:\Users\User94\Desktop\environment\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\generic.py", line 124, in get_serializer_class
+    if self.action == 'retrieve':
+AttributeError: 'UserViews' object has no attribute 'action'
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\generic.py changed, reloading. (2019-11-22 16:39:27; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:39:28; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\urls.py changed, reloading. (2019-11-22 16:39:34; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:39:35; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\generic.py changed, reloading. (2019-11-22 16:40:30; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:40:30; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\urls.py changed, reloading. (2019-11-22 16:40:51; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:40:52; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\generic.py changed, reloading. (2019-11-22 16:43:26; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:43:26; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\urls.py changed, reloading. (2019-11-22 16:43:40; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:43:41; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\views\viewset.py changed, reloading. (2019-11-22 16:45:35; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:45:36; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\urls.py changed, reloading. (2019-11-22 16:45:51; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:45:52; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\jira\settings.py changed, reloading. (2019-11-22 16:47:07; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-11-22 16:47:08; autoreload.py:597)
