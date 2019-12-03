@@ -15,3 +15,208 @@ INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week
 INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 20:01:07; autoreload.py:597)
 INFO:django.utils.autoreload: C:\Users\User94\Desktop\django\AdvancedDjango\week3\main\models.py changed, reloading. (2019-12-03 20:02:57; autoreload.py:217)
 INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 20:02:58; autoreload.py:597)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:20:45; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-03 23:23:07; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:23:09; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-03 23:24:51; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:24:52; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-03 23:26:04; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:26:05; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-03 23:30:25; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:30:29; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-03 23:32:27; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:32:29; autoreload.py:597)
+WARNING:django.request: Not Found: /main/users/9/ (2019-12-03 23:37:32; log.py:228)
+WARNING:django.request: Unauthorized: /main/users/ (2019-12-03 23:37:36; log.py:228)
+WARNING:django.request: Unauthorized: /main/users/ (2019-12-03 23:38:43; log.py:228)
+WARNING:django.request: Unauthorized: /main/users/ (2019-12-03 23:38:49; log.py:228)
+WARNING:django.request: Unauthorized: /main/users/ (2019-12-03 23:40:11; log.py:228)
+WARNING:django.request: Unauthorized: /main/users/ (2019-12-03 23:40:19; log.py:228)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-03 23:42:08; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:42:09; autoreload.py:597)
+WARNING:django.request: Unauthorized: /main/users/ (2019-12-03 23:42:15; log.py:228)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-03 23:42:30; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:42:32; autoreload.py:597)
+ERROR:django.request: Internal Server Error: /main/users/ (2019-12-03 23:42:35; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 485, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 403, in initial
+    self.check_permissions(request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 331, in check_permissions
+    for permission in self.get_permissions():
+TypeError: 'BasePermissionMetaclass' object is not iterable
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-03 23:44:46; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:44:47; autoreload.py:597)
+WARNING:django.request: Bad Request: /main/login/ (2019-12-03 23:45:10; log.py:228)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\serializers.py changed, reloading. (2019-12-03 23:47:02; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:47:07; autoreload.py:597)
+WARNING:django.request: Bad Request: /main/login/ (2019-12-03 23:47:19; log.py:228)
+WARNING:django.request: Method Not Allowed: /main/tasks/ (2019-12-03 23:48:47; log.py:228)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\auth.py changed, reloading. (2019-12-03 23:52:47; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:52:50; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\urls.py changed, reloading. (2019-12-03 23:52:56; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:52:58; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-03 23:58:48; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:58:49; autoreload.py:597)
+ERROR:django.request: Internal Server Error: /main/tasks/for_me/ (2019-12-03 23:58:58; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: for_me() missing 1 required positional argument: 'pk'
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-03 23:59:05; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-03 23:59:06; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:00:48; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:01:02; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:01:09; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:01:11; autoreload.py:597)
+WARNING:django.request: Bad Request: /main/tasks/ (2019-12-04 00:01:43; log.py:228)
+INFO:main.views.viewset: 11: anotheruser2 created task: lol (2019-12-04 00:02:47; viewset.py:60)
+INFO:main.views.viewset: 11: anotheruser2 created task: lol (2019-12-04 00:06:30; viewset.py:60)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:07:14; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:07:16; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:09:00; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:09:02; autoreload.py:597)
+WARNING:django.request: Method Not Allowed: /main/task_comments_viewset/comments_to_my_tasks/ (2019-12-04 00:09:14; log.py:228)
+ERROR:django.request: Internal Server Error: /main/task_comments_viewset/comments_to_my_tasks/ (2019-12-04 00:09:18; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py", line 107, in comments_to_my_tasks
+    tasks = TaskComment.comments.comments_to_my_tasks()
+TypeError: comments_to_my_tasks() missing 1 required positional argument: 'user'
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:09:46; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:09:48; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:12:26; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:12:28; autoreload.py:597)
+WARNING:django.request: Bad Request: /main/projects/ (2019-12-04 00:13:42; log.py:228)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:16:37; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:16:39; autoreload.py:597)
+WARNING:django.request: Bad Request: /main/project_list/members/ (2019-12-04 00:16:56; log.py:228)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\serializers.py changed, reloading. (2019-12-04 00:17:35; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:17:36; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\serializers.py changed, reloading. (2019-12-04 00:19:43; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:19:45; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:19:58; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:19:59; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\urls.py changed, reloading. (2019-12-04 00:20:32; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:20:33; autoreload.py:597)
+ERROR:django.request: Internal Server Error: /main/project_members/1/members/ (2019-12-04 00:20:46; log.py:228)
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\viewsets.py", line 114, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 497, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 457, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 468, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\views.py", line 494, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py", line 29, in members
+    return Response(serializer.data)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\serializers.py", line 757, in data
+    ret = super().data
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\serializers.py", line 261, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Lenovo\Desktop\work\AdvancedDjango\myvenv\lib\site-packages\rest_framework\serializers.py", line 675, in to_representation
+    self.child.to_representation(item) for item in iterable
+TypeError: 'Project' object is not iterable
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:23:05; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:23:06; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:25:23; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:25:25; autoreload.py:597)
+WARNING:django.request: Bad Request: /main/project_members/ (2019-12-04 00:26:44; log.py:228)
+WARNING:django.request: Bad Request: /main/project_members/ (2019-12-04 00:27:11; log.py:228)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\models.py changed, reloading. (2019-12-04 00:29:11; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:29:12; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\models.py changed, reloading. (2019-12-04 00:29:21; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:29:22; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:29:46; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:29:47; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:31:59; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:32:00; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:32:34; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:32:35; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:35:40; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:35:42; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:36:39; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:36:41; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:37:35; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:37:36; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:37:39; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:37:41; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\views\viewset.py changed, reloading. (2019-12-04 00:37:53; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:37:55; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:38:55; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:38:57; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:39:12; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:39:14; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:40:16; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:40:18; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:41:24; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:41:25; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:41:38; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:41:39; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:42:29; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:42:31; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:42:55; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:42:57; autoreload.py:597)
+INFO:django.utils.autoreload: C:\Users\Lenovo\Desktop\work\AdvancedDjango\jira_project\main\managers.py changed, reloading. (2019-12-04 00:43:09; autoreload.py:217)
+INFO:django.utils.autoreload: Watching for file changes with StatReloader (2019-12-04 00:43:10; autoreload.py:597)

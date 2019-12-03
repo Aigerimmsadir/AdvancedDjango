@@ -9,7 +9,6 @@ urlpatterns = [
     path('login/', obtain_jwt_token),
     path('logout/', logout),
     path('current/', current),
-    path('register/', UserCreate.as_view()),
     path('project_list/', ProjectList.as_view()),
     path('project_list/<int:pk>/', ProjectDetail.as_view()),
     path('task_comments/', TaskCommentList.as_view()),
@@ -21,7 +20,7 @@ urlpatterns = [
 ]
 
 router = routers.DefaultRouter()
-router.register('project_list/members', ProjectMemberViewSet, base_name='main')
+router.register('project_members', ProjectMemberViewSet, base_name='main')
 router.register('tasks', TaskViewSet, base_name='main')
 router.register('users', UserViewSet, base_name='main')
 router.register('projects', ProjectViewSet, base_name='main')

@@ -12,17 +12,6 @@ from main.serializers import *
 from rest_framework.permissions import IsAuthenticated
 
 
-
-class UserCreate(APIView):
-    http_method_names = ['post']
-
-    def post(self, request):
-        serializer = UserSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 @api_view(['POST'])
 def logout(request):
     request.auth.delete()

@@ -20,6 +20,10 @@ class UserSerializer(serializers.ModelSerializer):
         model = MainUser
         fields = ('id', 'username', 'email', 'first_name', 'last_name', 'password',)
 
+    def create(self, validated_data):
+        user = MainUser.objects.create_user(**validated_data)
+        return user
+
 
 class UserSerializerFull(UserSerializer):
     profile = ProfileSerializer()
@@ -68,7 +72,7 @@ class BlockSerializer(serializers.ModelSerializer):
 
 class ProjectMemberSerializer(serializers.ModelSerializer):
     project_name = serializers.SerializerMethodField()
-    user_id = serializers.IntegerField(write_only=True)
+    user_id = serializers.IntegerField()
 
     class Meta:
         model = ProjectMember

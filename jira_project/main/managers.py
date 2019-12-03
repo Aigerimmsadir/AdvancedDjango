@@ -2,6 +2,7 @@ from django.db import models
 from main.models import *
 from django.db.models import Max, Min, Count
 from django.db.models import Q
+from django.db.models import F
 
 
 class ProjectManager(models.Manager):
@@ -12,7 +13,8 @@ class ProjectManager(models.Manager):
         return super(ProjectManager, self).get_queryset().filter(creator=user)
 
     def more_than_2_members(self):
-        return super(ProjectManager, self).get_queryset(project_member_count__gt=2)
+        return super(ProjectManager, self).get_queryset().annotate(Count('project_members')).filter(
+            project_members__count__gt=2)
 
     def order_by_name(self):
         return super(ProjectManager, self).get_queryset().order_by('name')
@@ -29,7 +31,7 @@ class TaskManager(models.Manager):
         return super().get_queryset().filter(creator=user)
 
     def tasks_to_execute(self, user):
-        return super().get_queryset().filter(creator=user)
+        return super().get_queryset().filter(executor=user)
 
 
 class TaskCommentManager(models.Manager):
@@ -52,3 +54,12 @@ class ProjectMemberManager(models.Manager):
 
     def projects_of_user(self, user):
         return super().get_queryset().filter(user=user)
+
+    def members_of_my_projects(self, user):
+        projects = user.created_projects.all()
+        return super().get_queryset().filter(project_id__in=projects.values_list('id'))
+
+    def members_of_my_projects_ordered(self, user):
+        projects = user.created_projects.all()
+        return super().get_queryset().select_related('user').annotate(
+            username=F('user__username')).order_by('username').filter(project_id__in=projects.values_list('id'))

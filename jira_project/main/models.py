@@ -71,7 +71,8 @@ class Block(models.Model):
 class ProjectMember(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='project_members')
     user = models.ForeignKey(MainUser, on_delete=models.CASCADE, related_name='involved_projects')
-
+    objects = models.Manager()
+    members=ProjectMemberManager()
     def __str__(self):
         return self.user.username
 
